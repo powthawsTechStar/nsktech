@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NSK TECH | CCTV, Computers, Laptops, UPS, Home &amp; Gate Automation in Perundurai</title>
+<meta name="description" content="NSK TECH in Perundurai, Erode: CCTV, desktop and laptop sales and service, UPS, home automation and automatic gate installation. Call 95245 30729.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1f44;--navy2:#12305f;--green:#10b981;--green2:#047857;--ink:#1e293b;--mute:#5b6b82;--bg:#f5f8fb;--white:#fff;--r:18px;--sh:0 8px 28px rgba(10,31,68,.09)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.wrap{width:min(1140px,92%);margin-inline:auto}
+section{padding:80px 0}
+h1,h2,h3{line-height:1.15;color:var(--navy);letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:12px}
+.lead{color:var(--mute);max-width:60ch;margin-bottom:40px}
+.alt{background:var(--bg)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:999px;font-weight:700;font-size:.95rem;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn-green{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;box-shadow:0 6px 18px rgba(16,185,129,.35)}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(16,185,129,.45)}
+.btn-line{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-ghost{border-color:var(--navy);color:var(--navy)}
+.btn-ghost:hover{background:var(--navy);color:#fff}
+.btn-sm{padding:9px 16px;font-size:.85rem}
+.btn:disabled{opacity:.6;cursor:wait}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 #e3eaf2}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:1.4rem;color:var(--navy);letter-spacing:-.03em}
+.logo b{color:var(--green)}
+.menu{display:flex;align-items:center;gap:28px;list-style:none;padding:0}
+.menu a:not(.btn){font-weight:600;color:var(--ink)}
+.menu a:not(.btn):hover{color:var(--green2)}
+.burger{display:none;background:none;border:0;font-size:1.7rem;color:var(--navy);cursor:pointer}
+
+/* hero */
+.hero{background:radial-gradient(900px 400px at 85% 10%,rgba(16,185,129,.25),transparent 60%),linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:90px 0}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5.4vw,3.8rem);margin-bottom:14px}
+.hero h3{color:#6ee7b7;font-size:1.2rem;font-weight:600;margin-bottom:14px}
+.hero p{color:#cbd8ec;max-width:52ch;margin-bottom:28px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tile{aspect-ratio:1;border-radius:var(--r);display:grid;place-items:center;font-size:3.4rem;background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.18)}
+.tile:nth-child(2){transform:translateY(22px)}
+.tile:nth-child(4){transform:translateY(22px)}
+.tile small{display:block;font-size:.8rem;font-weight:600;color:#cbd8ec;text-align:center}
+
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:26px;display:flex;flex-direction:column;gap:10px;transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.ico{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;font-size:1.8rem;background:linear-gradient(135deg,#d1fae5,#a7f3d0)}
+.card h3{font-size:1.15rem}
+.card p{color:var(--mute);font-size:.95rem;flex:1}
+.card .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why div{padding:22px;border-left:4px solid var(--green);background:#fff;border-radius:0 var(--r) var(--r) 0;box-shadow:var(--sh)}
+.why h3{font-size:1.05rem;margin-bottom:4px}
+.why p{color:var(--mute);font-size:.92rem}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-img{aspect-ratio:4/3;border-radius:var(--r);background:linear-gradient(135deg,var(--navy),var(--green2));display:grid;place-items:center;font-size:5rem;box-shadow:var(--sh)}
+.about p{color:var(--mute);margin-bottom:16px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.shot{aspect-ratio:4/3;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#fff;font-weight:700;font-size:2.4rem;background:linear-gradient(135deg,var(--navy2),var(--navy));overflow:hidden}
+.shot span{font-size:.95rem}
+.shot:nth-child(even){background:linear-gradient(135deg,var(--green2),var(--navy2))}
+
+/* areas */
+.areas{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:8px 18px;border-radius:999px;background:#fff;border:1px solid #d5e0ec;font-weight:600;color:var(--navy)}
+.chip.main{background:var(--navy);color:#fff;border-color:var(--navy)}
+.note{margin-top:16px;color:var(--mute);font-size:.88rem}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:32px}
+form,.info{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:28px}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid #cdd8e5;border-radius:12px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--green);outline:0;box-shadow:0 0 0 3px rgba(16,185,129,.2)}
+[aria-invalid=true]{border-color:#dc2626}
+.err{color:#b91c1c;font-size:.82rem;min-height:1.1em;margin-top:4px}
+#status{margin-top:14px;font-weight:600;border-radius:12px;padding:0}
+#status.ok{background:#d1fae5;color:#065f46;padding:12px}
+#status.bad{background:#fee2e2;color:#991b1b;padding:12px}
+form .btn{width:100%;margin-top:18px}
+.info dl{display:grid;gap:14px;margin:16px 0 20px}
+.info dt{font-size:.8rem;color:var(--mute);font-weight:600}
+.info dd{font-weight:600;color:var(--navy)}
+.map{margin-top:20px;border-radius:var(--r);overflow:hidden;border:0;width:100%;height:260px;background:#e8eef5}
+
+/* footer */
+footer{background:var(--navy);color:#b8c7de;padding:56px 0 24px}
+footer .logo{color:#fff}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px}
+footer h4{color:#fff;margin-bottom:12px}
+footer ul{list-style:none;padding:0;display:grid;gap:8px;font-size:.92rem}
+footer a:hover{color:#6ee7b7}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:18px;font-size:.85rem;text-align:center}
+
+/* floating */
+.fab{position:fixed;right:18px;z-index:60;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 8px 22px rgba(0,0,0,.28);color:#fff}
+.fab.wa{bottom:20px;background:#25d366}
+.fab.call{bottom:88px;background:var(--navy);display:none}
+
+/* responsive */
+@media(max-width:900px){
+ section{padding:56px 0}
+ .hero .wrap,.about,.contact{grid-template-columns:1fr}
+ .grid3,.why,.gallery{grid-template-columns:1fr 1fr}
+ .fgrid{grid-template-columns:1fr 1fr}
+ .burger{display:block}
+ .menu{position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:18px 5%;gap:14px;box-shadow:0 14px 24px rgba(10,31,68,.12);display:none}
+ .menu.open{display:flex}
+ .fab.call{display:grid}
+}
+@media(max-width:560px){
+ .grid3,.why,.gallery,.fgrid{grid-template-columns:1fr}
+ .hero{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.mapbtn{margin-top:20px;display:flex}
+
+/* ===== v2: advanced design ===== */
+body{overflow-x:clip}
+.ico svg,.shot svg{width:30px;height:30px;stroke:var(--green2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.shot svg{width:46px;height:46px;stroke:#fff}
+.card{border-top:4px solid transparent;transition:transform .25s,border-color .25s}
+.card:hover{border-top-color:var(--green)}
+.card:hover .ico{background:linear-gradient(135deg,var(--green),var(--green2))}
+.card:hover .ico svg{stroke:#fff}
+.ico{transition:background .25s}
+/* live camera hero */
+.cam{background:#06132b;border:1px solid rgba(255,255,255,.18);border-radius:var(--r);padding:12px;box-shadow:0 24px 60px rgba(0,0,0,.4);font-family:ui-monospace,Menlo,Consolas,monospace;animation:rise .9s ease both}
+.cam-top{display:flex;justify-content:space-between;color:#cbd8ec;font-size:.78rem;padding:2px 6px 10px}
+.rec{color:#fca5a5;font-weight:700}
+.rec::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#ef4444;margin-right:6px;animation:blink 1.4s infinite}
+.cam-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cell{position:relative;aspect-ratio:4/3;border-radius:10px;background:linear-gradient(160deg,#0f2a55,#081a38);display:grid;place-items:center;overflow:hidden}
+.cell svg{width:38%;stroke:#6ee7b7;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.cell::before,.cell::after{content:"";position:absolute;width:16px;height:16px;border:2px solid rgba(110,231,183,.7)}
+.cell::before{top:8px;left:8px;border-right:0;border-bottom:0}
+.cell::after{bottom:8px;right:8px;border-left:0;border-top:0}
+.cell small{position:absolute;left:10px;bottom:8px;font-size:.68rem;color:#cbd8ec}
+@keyframes blink{50%{opacity:.25}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+/* quote strip */
+.quote{background:linear-gradient(135deg,var(--green2),var(--navy));color:#fff;padding:44px 0}
+.quote .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.quote h2{color:#fff;margin:0 0 4px;font-size:clamp(1.4rem,3vw,2rem)}
+.quote p{color:#d1fae5}
+.quote .btn-white{background:#fff;color:var(--navy)}
+/* detail dialog */
+dialog{border:0;border-radius:var(--r);padding:28px;width:min(460px,92vw);box-shadow:0 30px 80px rgba(10,31,68,.35);color:var(--ink)}
+dialog::backdrop{background:rgba(10,31,68,.6)}
+dialog h3{margin-bottom:10px;font-size:1.3rem}
+dialog ul{padding-left:20px;color:var(--mute);margin-bottom:20px;display:grid;gap:6px}
+dialog .x{position:absolute;top:10px;right:14px;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--mute);width:44px;height:44px}
+/* floating + dock */
+.fab.call{display:none!important}
+.fab.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ping 2.2s infinite}
+@keyframes ping{to{transform:scale(1.5);opacity:0}}
+.dock{display:none}
+/* ===== responsive ===== */
+.btn{min-height:44px}
+@media(min-width:1400px){.wrap{width:min(1280px,90%)}section{padding:96px 0}}
+@media(max-width:1100px){.menu{gap:18px}.fgrid{gap:24px}}
+@media(max-width:900px){
+ body{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+ .fab.wa{display:none}
+ .dock{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 4% calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.97);box-shadow:0 -6px 20px rgba(10,31,68,.12)}
+ .dock .btn{font-size:.95rem}
+ .dock .wa-btn{background:#25d366;color:#fff}
+ .hero .wrap{gap:36px}
+ .menu a:not(.btn){padding:10px 0;display:block}
+}
+@media(max-width:560px){
+ .wrap{width:90%}
+ .hero{padding:44px 0 56px}
+ .cta-row .btn{flex:1 1 100%}
+ .card,form,.info{padding:20px}
+ .quote .btn{width:100%}
+ .cam-top{font-size:.7rem}
+}
+@media(max-width:360px){h2{font-size:1.5rem}.logo{font-size:1.2rem}.dock .btn{padding:10px 8px;font-size:.88rem}}
+@media(max-height:480px) and (orientation:landscape){.hero{padding:36px 0}section{padding:44px 0}}
+@media(prefers-reduced-motion:reduce){.cam,.rec::before,.fab.wa::after{animation:none!important}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"NSK TECH","telephone":"+919524530729","email":"nsktech24@gmail.com","founder":"N. Kumaresan","address":{"@type":"PostalAddress","streetAddress":"39/1 T1, 11, KRP Complex, RS Road","addressLocality":"Perundurai","addressRegion":"Tamil Nadu","addressCountry":"IN"}}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<g id="i-cctv"><path d="M3 7h13v8H3z"/><path d="M16 10l5-2.5v7L16 12"/><path d="M8 15v4h5"/></g>
+<g id="i-desktop"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></g>
+<g id="i-laptop"><rect x="5" y="5" width="14" height="10" rx="1.5"/><path d="M2 19h20l-2-4H4z"/></g>
+<g id="i-ups"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 11v2M11 9l-2 4h4l-2 4"/></g>
+<g id="i-home"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></g>
+<g id="i-gate"><path d="M3 20V5M21 20V5M3 9h18M3 15h18M9 9v11M15 9v11"/></g>
+</defs></svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#home" class="logo" aria-label="NSK TECH home">NSK <b>TECH</b></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="btn btn-green btn-sm" data-call>Call Now</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <h1>Smart Technology. Safer Spaces.</h1>
+      <h3>Your Trusted Technology Partner in Perundurai.</h3>
+      <p>We provide reliable CCTV, computer and laptop sales and service, UPS solutions, home automation and automatic gate automation for homes and businesses.</p>
+      <div class="cta-row">
+        <a href="#services" class="btn btn-green">Explore Our Services</a>
+        <a class="btn btn-line" data-call>Call Now</a>
+      </div>
+    </div>
+    <div class="cam" aria-hidden="true">
+        <div class="cam-top"><span class="rec">REC</span><span id="clock"></span></div>
+        <div class="cam-grid">
+          <div class="cell"><svg viewBox="0 0 24 24"><use href="#i-gate"/></svg><small>CAM 01</small></div>
+          <div class="cell"><svg viewBox="0 0 24 24"><use href="#i-desktop"/></svg><small>CAM 02</small></div>
+          <div class="cell"><svg viewBox="0 0 24 24"><use href="#i-home"/></svg><small>CAM 03</small></div>
+          <div class="cell"><svg viewBox="0 0 24 24"><use href="#i-ups"/></svg><small>CAM 04</small></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Our Services</h2>
+    <p class="lead">Sales, installation and service for homes and businesses.</p>
+    <div class="grid3" id="serviceGrid"></div>
+  </div>
+</section>
+
+<section class="alt" id="why">
+  <div class="wrap">
+    <h2>Why Choose Us</h2>
+    <p class="lead">Straightforward service from a local team you can visit.</p>
+    <div class="why">
+      <div><h3>Reliable Products</h3><p>Dependable equipment for everyday use.</p></div>
+      <div><h3>Professional Installation</h3><p>Neat, careful setup at your site.</p></div>
+      <div><h3>Experienced Technical Support</h3><p>Help when something stops working.</p></div>
+      <div><h3>Affordable Pricing</h3><p>Fair quotes with no surprises.</p></div>
+      <div><h3>Customer Satisfaction</h3><p>We aim to get it right for you.</p></div>
+      <div><h3>Local Service in Perundurai</h3><p>Our shop is on RS Road, Perundurai.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="about-img" role="img" aria-label="NSK TECH shop placeholder, replace with a real photo">🛡️</div>
+    <div>
+      <h2>Technology Solutions You Can Trust.</h2>
+      <p>NSK TECH is a local technology sales and service business serving Perundurai and surrounding areas. We help homes and businesses with CCTV, computers, laptops, UPS systems, home automation and automatic gates.</p>
+      <p>Tell us what you need and we will recommend a practical solution.</p>
+      <a class="btn btn-green" href="#contact">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="gallery">
+  <div class="wrap">
+    <h2>Our Work</h2>
+    <p class="lead">Sample tiles. Replace each one with a real photo from your jobs.</p>
+    <div class="gallery" id="galleryGrid"></div>
+  </div>
+</section>
+
+<section class="quote"><div class="wrap"><div><h2>Need a quote for your place?</h2><p>Tell us what you need. We will get back to you.</p></div><a class="btn btn-white" href="#contact">Get a Free Quote</a></div></section>
+
+<section id="areas">
+  <div class="wrap">
+    <h2>Service Areas</h2>
+    <p class="lead">Based in Perundurai, Erode district.</p>
+    <div class="areas"><span class="chip main">Perundurai</span><span class="chip">Erode district</span></div>
+    <p class="note">Call us to confirm service in your location.</p>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap">
+    <h2>Send an Enquiry</h2>
+    <p class="lead">Share your requirement and we will get back to you.</p>
+    <div class="contact">
+      <form id="enquiry" novalidate>
+        <label for="name">Your name</label>
+        <input id="name" name="name" autocomplete="name" required><div class="err" data-for="name"></div>
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required><div class="err" data-for="phone"></div>
+        <label for="service">Service needed</label>
+        <select id="service" name="service" required></select><div class="err" data-for="service"></div>
+        <label for="location">Location</label>
+        <input id="location" name="location" required><div class="err" data-for="location"></div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <button class="btn btn-green" id="send" type="submit">Send Enquiry</button>
+        <div id="status" role="status" aria-live="polite"></div>
+      </form>
+      <div class="info">
+        <h3>NSK TECH</h3>
+        <dl>
+          <div><dt>Owner</dt><dd>N. Kumaresan</dd></div>
+          <div><dt>Phone</dt><dd><a data-call>95245 30729</a></dd></div>
+          <div><dt>Alternative phone</dt><dd><a href="tel:+919524695346">95246 95346</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:nsktech24@gmail.com">nsktech24@gmail.com</a></dd></div>
+          <div><dt>Address</dt><dd>39/1 T1, 11, KRP Complex, RS Road, Perundurai, Tamil Nadu.</dd></div>
+        </dl>
+        <div class="cta-row">
+          <a class="btn btn-green btn-sm" data-call>Call Now</a>
+          <a class="btn btn-ghost btn-sm" data-wa target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost btn-sm" href="mailto:nsktech24@gmail.com">Email</a>
+        </div>
+        <a class="btn btn-ghost mapbtn" id="map" target="_blank" rel="noopener">Open Location in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><a href="#home" class="logo">NSK <b>TECH</b></a><p style="margin-top:10px;font-size:.92rem">Technology sales and service for homes and businesses in Perundurai.</p></div>
+      <div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#about">About Us</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul id="footServices"></ul></div>
+      <div><h4>Contact</h4><ul><li><a data-call>95245 30729</a></li><li><a href="tel:+919524695346">95246 95346</a></li><li><a href="mailto:nsktech24@gmail.com">nsktech24@gmail.com</a></li><li>39/1 T1, 11, KRP Complex, RS Road, Perundurai, Tamil Nadu.</li></ul></div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> NSK TECH. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="fab wa" data-wa target="_blank" rel="noopener" aria-label="WhatsApp NSK TECH">💬</a>
+
+<nav class="dock" aria-label="Quick contact"><a class="btn btn-green" data-call>Call Now</a><a class="btn wa-btn" data-wa target="_blank" rel="noopener">WhatsApp</a></nav>
+<dialog id="dlg"><button class="x" aria-label="Close" onclick="dlg.close()">&times;</button><h3 id="dT"></h3><ul id="dL"></ul>
+<div class="cta-row"><a class="btn btn-green btn-sm" id="dW" target="_blank" rel="noopener">WhatsApp Enquiry</a><a class="btn btn-ghost btn-sm" href="#contact" id="dF">Use Enquiry Form</a></div></dialog>
+<script>
+/* ===== Central config: edit here ===== */
+const CONFIG = {
+  phone: "95245 30729", tel: "+919524530729",
+  whatsapp: "919524530729",            // confirm this number is WhatsApp-enabled
+  mapsQuery: "NSK TECH, KRP Complex, RS Road, Perundurai, Tamil Nadu", // or paste a Maps embed URL
+  formEndpoint: ""                      // e.g. Formspree / your API URL. Empty = form will show an error, never a fake success
+};
+const ic = n => `<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const SERVICES = [
+  {i:ic("cctv"),t:"CCTV Installation & Service",d:"Camera supply, installation and repair for homes, shops and offices."},
+  {i:ic("desktop"),t:"Desktop Sales & Service",d:"Desktop computers, upgrades and repairs."},
+  {i:ic("laptop"),t:"Laptop Sales & Service",d:"Laptop purchase help, repairs and servicing."},
+  {i:ic("ups"),t:"UPS Sales & Service",d:"UPS units and service to protect your equipment."},
+  {i:ic("home"),t:"Home Automation",d:"Smart control for lights, appliances and more."},
+  {i:ic("gate"),t:"Gate Automation",d:"Automatic gate installation and service."}
+];
+const DETAILS = [
+ ["Site visit and requirement discussion","Camera selection and supply","Installation and setup","Repair and service support"],
+ ["Desktop computers for home and office","Upgrades and component replacement","Troubleshooting and repair","Software and setup help"],
+ ["Laptop purchase guidance","Hardware and software repair","Upgrades and servicing","Setup help"],
+ ["UPS selection for your equipment","Supply and installation","Service and battery support","Advice on suitable capacity"],
+ ["Smart control planning","Supply and installation","Setup and demonstration","Service support"],
+ ["Automatic gate installation","Motor and control setup","Service and repair","Site visit for your gate type"]
+];
+const $ = s => document.querySelector(s);
+const waLink = (msg="Hello NSK TECH, I would like to enquire.") => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+
+/* render */
+$("#serviceGrid").innerHTML = SERVICES.map(s => `
+  <article class="card"><div class="ico" aria-hidden="true">${s.i}</div><h3>${s.t}</h3><p>${s.d}</p>
+  <div class="row"><button class="btn btn-ghost btn-sm" data-more="${SERVICES.indexOf(s)}">Learn More</button>
+  <a class="btn btn-green btn-sm" target="_blank" rel="noopener" href="${waLink(`Hello NSK TECH, I would like to enquire about ${s.t}.`)}">WhatsApp Enquiry</a></div></article>`).join("");
+$("#galleryGrid").innerHTML = ["CCTV installations","Computer setup","Laptop service","UPS installation","Smart home automation","Automatic gate installation"]
+  .map((g,k) => `<div class="shot" role="img" aria-label="${g} placeholder photo">${SERVICES[k].i}<span>${g}</span></div>`).join("");
+$("#footServices").innerHTML = SERVICES.map(s => `<li>${s.t}</li>`).join("");
+$("#service").innerHTML = `<option value="">Select a service</option>` + SERVICES.map(s => `<option>${s.t}</option>`).join("");
+$("#year").textContent = new Date().getFullYear();
+$("#map").href = CONFIG.mapsQuery.startsWith("http") ? CONFIG.mapsQuery : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONFIG.mapsQuery)}`;
+
+/* links */
+document.querySelectorAll("[data-call]").forEach(a => a.href = "tel:" + CONFIG.tel);
+document.querySelectorAll("[data-wa]").forEach(a => a.href = waLink());
+document.querySelectorAll("[data-pick]").forEach(a => a.addEventListener("click", () => $("#service").value = a.dataset.pick));
+
+/* detail dialog + clock */
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-more]"); if (!b) return;
+  const s = SERVICES[+b.dataset.more];
+  $("#dT").textContent = s.t;
+  $("#dL").innerHTML = DETAILS[+b.dataset.more].map(x => `<li>${x}</li>`).join("");
+  $("#dW").href = waLink(`Hello NSK TECH, I would like to enquire about ${s.t}.`);
+  $("#dF").onclick = () => { $("#service").value = s.t; dlg.close(); };
+  dlg.showModal();
+});
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+const tick = () => { $("#clock").textContent = new Date().toLocaleString("en-IN",{hour12:false}); };
+tick(); setInterval(tick, 1000);
+
+/* mobile menu */
+const burger = $("#burger"), menu = $("#menu");
+burger.addEventListener("click", () => burger.setAttribute("aria-expanded", menu.classList.toggle("open")));
+menu.addEventListener("click", e => { if (e.target.tagName === "A") { menu.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); } });
+
+/* form */
+const form = $("#enquiry"), status = $("#status");
+const rules = {
+  name: v => v.trim().length >= 2 || "Enter your name.",
+  phone: v => /^(\+?91)?[6-9]\d{9}$/.test(v.replace(/[\s-]/g, "")) || "Enter a valid 10-digit mobile number.",
+  service: v => v !== "" || "Choose a service.",
+  location: v => v.trim().length >= 2 || "Enter your location."
+};
+function validate() {
+  let ok = true;
+  for (const k in rules) {
+    const el = form.elements[k], r = rules[k](el.value);
+    form.querySelector(`[data-for=${k}]`).textContent = r === true ? "" : r;
+    el.setAttribute("aria-invalid", r !== true);
+    if (r !== true) ok = false;
+  }
+  return ok;
+}
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  status.className = ""; status.textContent = "";
+  if (!validate()) return;
+  const btn = $("#send"); btn.disabled = true; btn.textContent = "Sending...";
+  try {
+    if (!CONFIG.formEndpoint) throw new Error("not-configured");
+    const res = await fetch(CONFIG.formEndpoint, { method: "POST", headers: {"Content-Type":"application/json", Accept:"application/json"}, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+    if (!res.ok) throw new Error("http-" + res.status);
+    status.className = "ok"; status.textContent = "Enquiry sent. We will contact you soon."; form.reset();
+  } catch (err) {
+    status.className = "bad";
+    status.innerHTML = err.message === "not-configured"
+      ? `The enquiry form is not connected yet. Please <a href="tel:${CONFIG.tel}"><u>call us</u></a> or <a href="${waLink()}" target="_blank" rel="noopener"><u>message on WhatsApp</u></a>.`
+      : `Your enquiry was not sent. Please try again or <a href="tel:${CONFIG.tel}"><u>call us</u></a>.`;
+  } finally { btn.disabled = false; btn.textContent = "Send Enquiry"; }
+});
+</script>
+</body>
+</html>
